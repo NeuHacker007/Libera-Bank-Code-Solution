@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "ed7e6bcd-920c-4082-90a8-e3bd3ac12220",
+		"name": "Libra Pos API Test Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetValuesFromTill",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/pos/GetValues",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"pos",
+						"GetValues"
+					]
+				},
+				"description": "used to test the GetTotalValue API"
+			},
+			"response": []
+		},
+		{
+			"name": "GetCountByCoinType",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/pos/GetCountBy/Quarter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"pos",
+						"GetCountBy",
+						"Quarter"
+					]
+				},
+				"description": "Used to test the GetCountBy method"
+			},
+			"response": []
+		},
+		{
+			"name": "Replace the till",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n\t\"coinType\": \"Quarter\",\n\t\"numOfCoin\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/pos/PutTill",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"pos",
+						"PutTill"
+					]
+				},
+				"description": "Replace the till"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Changes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"amount\": 0.99\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/pos/getchanges",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"pos",
+						"getchanges"
+					]
+				},
+				"description": "Used to get the changes"
+			},
+			"response": []
+		}
+	]
+}
